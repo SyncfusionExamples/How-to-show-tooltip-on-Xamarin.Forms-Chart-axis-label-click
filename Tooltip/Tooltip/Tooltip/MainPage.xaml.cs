@@ -17,11 +17,16 @@ namespace Tooltip
 
         private void CategoryAxis_LabelClicked(object sender, LabelClickedEventArgs e)
         {
-            var data = (chart.BindingContext as ChartViewModel).ColumnData[(int)e.Position] as ChartModel;
-            float xPoint = (float)chart.ValueToPoint(chart.PrimaryAxis, (int)e.Position);
-            float yPoint = (float)chart.ValueToPoint(chart.SecondaryAxis, data.YValue);
+            var datapoints = series.GetDataPoints(e.Position, e.Position, chart.SeriesBounds.Top, chart.SeriesBounds.Bottom);
 
-            tooltip.Show(xPoint, yPoint, true);
+            if (datapoints.Count > 0)
+            {
+                ChartModel data = datapoints[0] as ChartModel;
+                float xPoint = (float)chart.ValueToPoint(chart.PrimaryAxis, e.Position);
+                float yPoint = (float)chart.ValueToPoint(chart.SecondaryAxis, data.YValue);
+
+                tooltip.Show(xPoint, yPoint, true);
+            }
         }
     }
 }
