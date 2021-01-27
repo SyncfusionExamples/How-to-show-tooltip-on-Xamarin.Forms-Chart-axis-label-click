@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="d027b639-fd7a-4948-bcd4-071b3c9fa921"
-    Publisher="CN=2804668b-f114-4929-aca3-12c9ade55802"
+    Name="c6dbfd5f-460d-401d-8f5e-56eeac59c687"
+    Publisher="CN=5f5b9fa9-d77a-42c2-964c-d8827814c5e5"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Tooltip.UWP</DisplayName>
-    <PublisherDisplayName>2804668b-f114-4929-aca3-12c9ade55802</PublisherDisplayName>
+    <PublisherDisplayName>5f5b9fa9-d77a-42c2-964c-d8827814c5e5</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

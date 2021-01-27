@@ -1,6 +1,7 @@
 ﻿using Syncfusion.SfChart.XForms;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,6 @@ namespace Tooltip
         {
             InitializeComponent();
         }
-
         private void CategoryAxis_LabelClicked(object sender, LabelClickedEventArgs e)
         {
             var datapoints = series.GetDataPoints(e.Position, e.Position, chart.SeriesBounds.Top, chart.SeriesBounds.Bottom);
@@ -28,5 +28,6 @@ namespace Tooltip
                 tooltip.Show(xPoint, yPoint, true);
             }
         }
+
     }
 }
